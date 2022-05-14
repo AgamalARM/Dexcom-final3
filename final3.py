@@ -190,9 +190,7 @@ if authentication_status:
         
         df_sunbjects = pd.DataFrame(get_data_subject())
         
-        if st.button("Show Dataset") :
-            st.write("## Show Subject Dataset")
-            st.write(df_sunbjects)
+        
         if st.sidebar.button("Add Subject"):
             get_data_subject().append({"Subject_ID":subject_id, 
                            "Subject_Name":subject_name, 
@@ -204,7 +202,10 @@ if authentication_status:
 #             st.write("## Show Subject Dataset")
 #             st.write(df_subjects)
 #             st.write(df_subjects.shape)
-            
+
+        if st.button("Show Dataset") :
+            st.write("## Show Subject Dataset")
+            st.write(df_sunbjects)
         
             
             
